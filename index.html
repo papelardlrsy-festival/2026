@@ -19,7 +19,7 @@
         :root {
             --bg: #ffffff;
             --text: #1832bb;
-            --text-soft: #ff4496;
+            --text-soft: #4a54c9;
             --accent: #ff4496;
             --card-bg: #f9fafb;
             --card-border: 1px solid rgba(24,50,187,0.1);
@@ -43,6 +43,7 @@
         .brand:hover { text-decoration: none; }
         .nav-link { font-weight: 600; padding: 0.5rem 1rem; border: 2px solid var(--accent); border-radius: 50px; color: var(--accent); }
         .nav-link:hover { background: var(--accent); color: #fff; text-decoration: none; }
+        .nav-link-short { display: none; }
 
         /* Hero */
         header.hero { text-align: center; padding: 3.5rem 1rem 2.5rem; position: relative; }
@@ -114,6 +115,8 @@
         footer { text-align: center; padding: 3rem 1rem 2rem; font-size: 0.85rem; color: var(--text-soft); }
 
         @media (max-width: 600px) {
+            .nav-link-full { display: none; }
+            .nav-link-short { display: inline; }
             .hero-actions { flex-direction: column; align-items: center; }
             .about-flex, .infos-flex { flex-direction: column; text-align: center; }
             .cta-hand { display: none; }
@@ -125,7 +128,10 @@
     <nav class="topnav">
         <div class="container topnav-inner">
             <a href="index.html" class="brand">Papelard</a>
-            <a href="boutique.html" class="nav-link">Goodies</a>
+            <a href="boutique.html" class="nav-link">
+                <span class="nav-link-full">Je veux mon t-shirt !</span>
+                <span class="nav-link-short">T-shirt</span>
+            </a>
         </div>
     </nav>
 
@@ -249,7 +255,7 @@ Au programme :
 
         <div class="cta-banner">
             <h2>La boutique du festival</h2>
-            <p>T-shirts sérigraphiés par nos bénévoles et stickers du Festival Papelard, en édition limitée.</p>
+            <p>T-shirts sérigraphiés par nos bénévoles du Festival Papelard, en édition limitée.</p>
             <a href="boutique.html" class="btn btn-primary">Voir la boutique</a>
             <img src="assets/img/main-droite.png" alt="" aria-hidden="true" class="cta-hand">
         </div>

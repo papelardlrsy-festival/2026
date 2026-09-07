@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique — Festival Papelard</title>
-    <meta name="description" content="Boutique du Festival Papelard : t-shirts et stickers en édition limitée, La Roche-sur-Yon, 7ᵉ édition 2026.">
+    <meta name="description" content="Boutique du Festival Papelard : t-shirt en édition limitée, La Roche-sur-Yon, 7ᵉ édition 2026.">
     <meta property="og:title" content="Boutique — Festival Papelard">
-    <meta property="og:description" content="T-shirts sérigraphiés par nos bénévoles et stickers du Festival Papelard, en édition limitée.">
+    <meta property="og:description" content="T-shirt sérigraphié par nos bénévoles du Festival Papelard, en édition limitée.">
     <meta property="og:image" content="assets/img/produit-tshirt.png">
     <link rel="canonical" href="https://festival-papelard-2026.fr/boutique.html" />
     <style>
@@ -49,6 +49,7 @@
         main.container { padding-bottom: 3rem; }
 
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; margin-top: 1rem; }
+        .product-grid.single { grid-template-columns: unset; max-width: 380px; margin-left: auto; margin-right: auto; }
         .product-card { background: var(--card-bg); border: var(--card-border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
         .product-visual { height: 380px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 1rem; }
         .product-visual img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -87,12 +88,12 @@
     <header class="hero">
         <div class="container">
             <h1>La boutique</h1>
-            <p class="subtitle">Repartez avec un souvenir du Festival Papelard<br><b>Venez avec votre t-shirt au Supermarché !</b></p>
+            <p class="subtitle">Repartez avec un souvenir du Festival Papelard, 7ᵉ édition<br>Venez avec votre t-shirt au Supermarché !</p>
         </div>
     </header>
 
     <main class="container">
-        <div class="product-grid">
+        <div class="product-grid single">
 
             <article class="product-card">
                 <div class="product-visual">
@@ -108,19 +109,6 @@
                 </div>
             </article>
 
-            <article class="product-card">
-                <div class="product-visual">
-                    <img src="assets/img/produit-stickers.png" alt="Pack de 5 stickers du Festival Papelard : logo, mascotte, yeux, yeux bulles et étoile filante">
-                </div>
-                <div class="product-body">
-                    <h2>Pack de stickers</h2>
-                    <p class="price-tag">Prix à venir</p>
-                    <p class="desc">Un pack de 5 stickers tirés de l'affiche de cette 7ème édition !</p>
-                    <!-- Remplacer le href ci-dessous par le lien de votre boutique HelloAsso -->
-                    <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Précommander</a>
-                </div>
-            </article>
-
         </div>
 
         <section class="how-it-works">
@@ -128,7 +116,7 @@
             <div class="steps">
                 <div class="step">
                     <h3>1. Précommandez en ligne</h3>
-                    <p>T-shirt ou stickers, cliquez sur "Précommander".</p>
+                    <p>Cliquez sur "Précommander".</p>
                 </div>
                 <div class="step">
                     <h3>2. Payez en toute sécurité</h3>
