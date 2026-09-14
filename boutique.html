@@ -45,11 +45,17 @@
         header.hero { text-align: center; padding: 3.5rem 1rem 2.5rem; }
         h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 0.6rem 0; }
         .subtitle { font-size: 1.1rem; color: var(--text-soft); max-width: 480px; margin: 0 auto; }
+        .deadline-badge {
+            display: inline-block; font-family: var(--font-display); font-size: 1.05rem;
+            border: 2px dashed var(--accent); color: var(--accent); padding: 0.35rem 1.1rem;
+            border-radius: 50px; margin: 1rem 0;
+        }
+        .subtitle.accent { color: var(--accent); font-weight: 600; margin-top: 0.5rem; }
 
         main.container { padding-bottom: 3rem; }
 
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; margin-top: 1rem; }
-        .product-grid.single { grid-template-columns: unset; max-width: 380px; margin-left: auto; margin-right: auto; }
+        .product-grid.single { grid-template-columns: unset; max-width: 420px; margin-left: auto; margin-right: auto; }
         .product-card { background: var(--card-bg); border: var(--card-border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
         .product-visual { height: 380px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 1rem; }
         .product-visual img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -58,6 +64,15 @@
         .price-tag { font-weight: 700; font-size: 1.15rem; color: var(--accent); margin: 0; }
         .product-body p.desc { color: var(--text-soft); margin: 0; font-size: 0.95rem; }
         .product-body .meta { font-size: 0.85rem; color: var(--text-soft); margin: 0; }
+
+        .pickup-box {
+            background: rgba(255,68,150,0.07); border: 1.5px solid rgba(255,68,150,0.35);
+            border-radius: 10px; padding: 0.9rem 1rem; margin: 0.4rem 0 0.2rem;
+        }
+        .pickup-box .pickup-label { display: block; font-weight: 700; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.3rem; }
+        .pickup-box .pickup-dates { display: block; font-weight: 700; color: var(--text); font-size: 1rem; margin-bottom: 0.15rem; }
+        .pickup-box .pickup-place { display: block; color: var(--text-soft); font-size: 0.88rem; }
+
         .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 700; text-align: center; margin-top: 0.5rem; }
         .btn-primary { background: var(--accent); color: #fff; }
         .btn-primary:hover { background: #e63886; text-decoration: none; }
@@ -67,6 +82,7 @@
         .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
         .step h3 { margin: 0 0 0.3rem 0; font-size: 1rem; }
         .step p { margin: 0; color: var(--text-soft); font-size: 0.95rem; }
+        .step p strong { color: var(--text); }
 
         .contact-section { margin-top: 3.5rem; }
         .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -89,8 +105,8 @@
         <div class="container">
             <h1>La boutique</h1>
             <p class="subtitle">Repartez avec un souvenir du Festival Papelard</p>
-            <p class="subtitle">Pré-commandez avant le 20 octobre</p>
-            <p class="accent">Venez avec votre t-shirt au Supermarché !</p>
+            <div class="deadline-badge">Précommande jusqu'au 20 octobre</div>
+            <p class="subtitle accent">Venez avec votre t-shirt au Supermarché !</p>
         </div>
     </header>
 
@@ -104,10 +120,16 @@
                 <div class="product-body">
                     <h2>T-shirt Festival Papelard</h2>
                     <p class="price-tag">15 €</p>
-                    <p class="desc">Le visuel de la 7ᵉ édition, sérigraphié à la main par les bénévoles du festival sur un t-shirt rose. A noter : la photo ci-dessus a été réalisée sur Photoshop (photo non-contractuelle).</p>
+                    <p class="desc">Le visuel de la 7ᵉ édition, sérigraphié à la main par les bénévoles du festival sur un t-shirt rose. À noter : la photo ci-dessus a été réalisée sur Photoshop (photo non-contractuelle).</p>
                     <p class="meta">Tailles XS à XL, unisexe</p>
-                    <p class="meta">Retrait uniquement à La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon, à partir du 22 novembre et jusqu'au 5 décembre.</p>
-                    <!-- Remplacer le href ci-dessous par le lien de la boutique HelloAsso -->
+
+                    <div class="pickup-box">
+                        <span class="pickup-label">Retrait de la commande</span>
+                        <span class="pickup-dates">Du 22 novembre au 5 décembre</span>
+                        <span class="pickup-place">À La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon — pas d'envoi postal</span>
+                    </div>
+
+                    <!-- Lien de la boutique HelloAsso -->
                     <a href="https://www.helloasso.com/associations/association-transversale/boutiques/t-shirt-festival-papelard-2026" class="btn btn-primary" target="_blank" rel="noopener">Précommander</a>
                 </div>
             </article>
@@ -119,7 +141,7 @@
             <div class="steps">
                 <div class="step">
                     <h3>1. Précommandez en ligne</h3>
-                    <p>Cliquez sur "Précommander".</p>
+                    <p>Cliquez sur "Précommander", <strong>avant le 20 octobre</strong>.</p>
                 </div>
                 <div class="step">
                     <h3>2. Payez en toute sécurité</h3>
@@ -127,7 +149,7 @@
                 </div>
                 <div class="step">
                     <h3>3. Récupérez votre commande</h3>
-                    <p>Retrait uniquement à La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon, à partir du 22 novembre et jusqu'au 5 décembre. Pas d'envoi postal.</p>
+                    <p>Retrait uniquement à La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon, <strong>du 22 novembre au 5 décembre</strong>. Pas d'envoi postal.</p>
                 </div>
             </div>
         </section>
