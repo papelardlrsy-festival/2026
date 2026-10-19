@@ -77,13 +77,46 @@
         .programme-heading-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
         .programme-heading-row h2 { margin-bottom: 0; }
         .tag-programme-img { width: 120px; transform: rotate(-4deg); }
-        .program-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
-        .program-card { background: var(--card-bg); border: var(--card-border); padding: 1.25rem; border-radius: var(--radius); }
-        .program-card h3 { margin: 0 0 0.4rem 0; font-size: 1.05rem; }
-        .program-card p { margin: 0; color: var(--text-soft); font-size: 0.95rem; }
-        .program-card.highlight { background: var(--text); border-color: var(--text); }
-        .program-card.highlight h3, .program-card.highlight p { color: #fff; }
-        .program-card.full-width { grid-column: 1 / -1; }
+        .sub-heading { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--accent); margin: 0 0 1rem 0; }
+        .map-row { display: flex; align-items: center; gap: 1.5rem 2.5rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+        .map-figure { flex: 1 1 300px; max-width: 440px; margin: 0; }
+        .map-figure img { width: 100%; height: auto; border-radius: var(--radius); border: var(--card-border); }
+        .map-side { flex: 1 1 280px; }
+        .side-title { margin: 0 0 0.9rem 0; font-weight: 700; color: var(--accent); }
+        .star-legend { list-style: none; padding: 0; margin: 0; }
+        .star-legend li { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; color: var(--text-soft); }
+        .star-legend .star { font-size: 1.3rem; line-height: 1; }
+        .star-legend strong { color: var(--text); }
+        .map-side .legend-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+
+        /* Week-end : une carte par jour */
+        .day-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+        .day-card { background: var(--card-bg); border: var(--card-border); border-top: 5px solid var(--day-color); border-radius: var(--radius); padding: 1.25rem; }
+        .day-card .day-block { width: 100%; max-width: 250px; height: auto; margin: 0 auto 0.75rem; }
+        .day-card h4 { margin: 0; font-size: 1.1rem; }
+        .day-place { color: var(--text-soft); font-size: 0.9rem; margin: 0.2rem 0 0.9rem 0; }
+        .day-card ul { list-style: none; padding: 0; margin: 0; }
+        .day-card li { margin-bottom: 0.75rem; font-size: 0.95rem; }
+
+        /* Expositions & ateliers du mois */
+        .month-block { margin-top: 3.5rem; }
+        .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem 2.5rem; }
+        .legend h4 { margin: 0 0 0.9rem 0; font-size: 1rem; }
+        .legend.expos h4 { color: var(--text); }
+        .legend.ateliers h4 { color: var(--accent); }
+        .legend ul { list-style: none; padding: 0; margin: 0; }
+        .legend li { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; line-height: 1.35; }
+        .legend li img { width: 40px; height: 40px; flex: 0 0 auto; }
+        .legend li span { color: var(--text-soft); font-size: 0.95rem; }
+        .legend li strong { display: block; color: var(--text); }
+        .note-box { background: rgba(255,68,150,0.07); border: 1.5px solid rgba(255,68,150,0.35); border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1.75rem; }
+        .note-box p { margin: 0 0 0.6rem 0; }
+        .note-box p:last-child { margin-bottom: 0; }
+
+        /* Artistes & partenaires */
+        .chip-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .chip-list li { background: var(--card-bg); border: var(--card-border); border-radius: 50px; padding: 0.4rem 1rem; font-weight: 600; }
+        .chip-list li span { font-weight: 400; color: var(--text-soft); font-size: 0.9rem; margin-left: 0.3rem; }
 
         /* Practical info */
         .infos-flex { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
@@ -92,6 +125,18 @@
         .info-item h3 { margin: 0 0 0.3rem 0; font-size: 0.95rem; color: var(--accent); }
         .info-item p { margin: 0; }
         .info-note { font-size: 0.9rem; color: var(--text-soft); margin-top: 1.5rem; }
+
+        /* Agenda des infos pratiques */
+        .infos-intro { max-width: 62ch; margin: 0 0 1.75rem 0; }
+        .agenda { list-style: none; padding: 0; margin: 0 0 2.5rem 0; }
+        .agenda li { display: grid; grid-template-columns: 170px 1fr; gap: 0.5rem 1.5rem; padding: 1.1rem 0; border-top: 1px solid rgba(24,50,187,0.12); }
+        .agenda li:last-child { border-bottom: 1px solid rgba(24,50,187,0.12); }
+        .agenda .when { font-family: var(--font-display); font-size: 1.1rem; line-height: 1.3; color: var(--day-color, var(--accent)); }
+        .agenda .when small { display: block; font-family: var(--font-main); font-size: 0.85rem; color: var(--text-soft); }
+        .agenda h3 { margin: 0 0 0.2rem 0; font-size: 1.05rem; }
+        .agenda .where { margin: 0 0 0.6rem 0; color: var(--text-soft); font-size: 0.9rem; }
+        .agenda .line { margin: 0 0 0.4rem 0; font-size: 0.95rem; }
+        .agenda .line strong { color: var(--text); }
 
         /* FAQ */
         details { background: var(--card-bg); border: var(--card-border); padding: 1rem 1.25rem; border-radius: 10px; margin-bottom: 0.6rem; cursor: pointer; }
@@ -119,6 +164,7 @@
             .nav-link-short { display: inline; }
             .hero-actions { flex-direction: column; align-items: center; }
             .about-flex, .infos-flex { flex-direction: column; text-align: center; }
+            .agenda li { grid-template-columns: 1fr; }
             .cta-hand { display: none; }
         }
     </style>
@@ -176,46 +222,171 @@ Le samedi 5 décembre, c'est la date clé pour faire de belles découvertes grap
                 <h2>Le programme</h2>
                 <img src="assets/img/tag-programme.png" alt="Expos, concert, cinéma" class="tag-programme-img">
             </div>
-            <div class="program-grid">
-                <div class="program-card">
-                    <h3>Expositions</h3>
-                    <p>À venir…</p>
+
+            <h3 class="sub-heading">Un week-end Papelard du vendredi au dimanche !</h3>
+            <div class="map-row">
+                <figure class="map-figure">
+                    <img src="assets/img/plan-weekend.jpg" alt="Plan du centre-ville de La Roche-sur-Yon avec les trois lieux du week-end : Le Concorde, La Gâterie et L'Abri Bar" loading="lazy">
+                </figure>
+                <div class="map-side">
+                    <p class="side-title">Les trois lieux du week-end</p>
+                    <ul class="star-legend">
+                        <li><span class="star" style="color: #ff4496;">✦</span><span><strong>Vendredi 4</strong> · Cinéma Le Concorde</span></li>
+                        <li><span class="star" style="color: #1832bb;">✦</span><span><strong>Samedi 5</strong> · La Gâterie</span></li>
+                        <li><span class="star" style="color: #2f0036;">✦</span><span><strong>Dimanche 6</strong> · L'Abri Bar</span></li>
+                    </ul>
                 </div>
-                <div class="program-card">
-                    <h3>Ateliers</h3>
-                    <p>À venir…</p>
+            </div>
+
+            <div class="day-grid">
+                <article class="day-card" style="--day-color: #ff4496;">
+                    <img src="assets/img/bloc-date-04-12.png" alt="" class="day-block">
+                    <h4>Vendredi 4 décembre</h4>
+                    <p class="day-place">Cinéma Le Concorde, avec l'association OffScreen</p>
+                    <ul>
+                        <li><strong>20h · Vernissage</strong> de l'exposition des fonds de l'Artothèque du réseau des Médiathèques de La Roche-sur-Yon Agglomération.</li>
+                        <li><strong>20h30 · Projection</strong> du film d'animation « Unicorn Wars » (Alberto Vázquez, 2022), présentation par l'association OffScreen.</li>
+                    </ul>
+                </article>
+
+                <article class="day-card" style="--day-color: #1832bb;">
+                    <img src="assets/img/bloc-date-05-12.png" alt="" class="day-block">
+                    <h4>Samedi 5 décembre</h4>
+                    <p class="day-place">La Gâterie, 17 place du Marché, avec la commission Papelard</p>
+                    <ul>
+                        <li><strong>11h–20h · Supermarché de la micro-édition</strong>, une expo-vente réunissant 11 artistes et collectifs. Venez découvrir leurs stands !</li>
+                        <li><strong>Concert</strong> de Shitty Shed, en clôture du Supermarché.</li>
+                    </ul>
+                </article>
+
+                <article class="day-card" style="--day-color: #2f0036;">
+                    <img src="assets/img/bloc-date-06-12.png" alt="" class="day-block">
+                    <h4>Dimanche 6 décembre</h4>
+                    <p class="day-place">L'Abri Bar, de 14h à 20h, avec l'association Domino Panda</p>
+                    <ul>
+                        <li><strong>14h–18h · Atelier fanzine musique</strong> : chaque participant·e envoie en amont un morceau de musique, qui sera réuni avec les autres sur une clé USB accompagnant le fanzine réalisé sur place.</li>
+                        <li><strong>18h30 · Concert</strong> d'ARLT.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="month-block">
+                <h3 class="sub-heading">Des expositions et des ateliers tout au long du mois de décembre</h3>
+                <div class="map-row">
+                <figure class="map-figure">
+                    <img src="assets/img/plan-expos-ateliers.jpg" alt="Plan du centre-ville de La Roche-sur-Yon avec les lieux des expositions (A à D) et des ateliers (1 à 3)" loading="lazy">
+                </figure>
+                    <div class="map-side">
+                <div class="legend-grid">
+                    <div class="legend expos">
+                        <h4>Où voir les expositions en décembre ?</h4>
+                        <ul>
+                            <li><img src="assets/img/pin-a.png" alt="A"><span><strong>L'Abri Bar</strong>Expo Domino Panda</span></li>
+                            <li><img src="assets/img/pin-b.png" alt="B"><span><strong>Comme à la Radio</strong>Expo Griffe Atelier (Vendée)</span></li>
+                            <li><img src="assets/img/pin-c.png" alt="C"><span><strong>Cinéma Le Concorde</strong>Expo Fonds Artothèque</span></li>
+                            <li><img src="assets/img/pin-d.png" alt="D"><span><strong>Bistro Martha</strong>Expo suite à l'atelier cyanotype</span></li>
+                        </ul>
+                    </div>
+                    <div class="legend ateliers">
+                        <h4>À quels ateliers peut-on participer ?</h4>
+                        <ul>
+                            <li><img src="assets/img/pin-1.png" alt="1"><span><strong>Atelier fanzine à L'Abri Bar</strong>Le 6 décembre de 14h à 18h</span></li>
+                            <li><img src="assets/img/pin-2.png" alt="2"><span><strong>Atelier cyanotype au Bistro Martha</strong>Le 12 décembre de 15h à 17h30</span></li>
+                            <li><img src="assets/img/pin-3.png" alt="3"><span><strong>Atelier fanzine à La Gâterie</strong>Le 19 décembre de 14h à 18h</span></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="program-card">
-                    <h3>Cinéma</h3>
-                    <p>À venir…</p>
+                    </div>
                 </div>
-                <div class="program-card highlight full-width">
-                    <h3>Supermarché de la micro-édition + Concert !</h3>
-                    <p>Samedi 5 décembre, à La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon. Supermarché à partir de 11h, puis concert à partir de 19h. Le temps fort du festival !</p>
+
+                <!-- Ajouter ici le lien de réservation des ateliers (HelloAsso "Ateliers Papelard") -->
+                <div class="note-box">
+                    <p><strong>Tous les ateliers sont accessibles sous réservation (~12 places) et à prix libre.</strong></p>
+                    <p>La réservation peut se faire par mail à <a href="mailto:papelardlrsy@gmail.com?subject=R%C3%A9servation%20atelier">papelardlrsy@gmail.com</a> ou via Instagram <a href="https://www.instagram.com/papelardfestival/" target="_blank" rel="noopener">@papelardfestival</a>.</p>
+                    <p>Les contributions des participants servent directement à financer le Festival Papelard (coût des fournitures, défraiement des groupes de musique, catering) et nous permettent de continuer à vous proposer des animations autour du fanzinat, de l'estampe et de la micro-édition chaque année, en décembre !</p>
                 </div>
             </div>
         </section>
 
+        <section id="artistes">
+            <h2>Les artistes du Supermarché</h2>
+            <p>9 tables, 11 artistes et collectifs déjà confirmés pour le samedi 5 décembre, à La Gâterie :</p>
+            <ul class="chip-list">
+                <li>Mc Clane <span>Bretagne</span></li>
+                <li>Hector de la Vallée <span>Nantes</span></li>
+                <li>Cool Paper Zone <span>Nantes</span></li>
+                <li>Hella Hag <span>Nantes</span></li>
+                <li>Castel-comix <span>Bourgogne</span></li>
+                <li>Hors-Cadre <span>Aveyron</span></li>
+                <li>Collectif 3PPAP <span>Bordeaux</span></li>
+                <li>Jean-Baptiste Lévêque &amp; Clément Moreau <span>Nantes</span></li>
+                <li>Audacieuses &amp; Off Screen <span>La Roche-sur-Yon</span></li>
+            </ul>
+            <p class="info-note">Présentations détaillées à venir sur notre Instagram <a href="https://www.instagram.com/papelardfestival/" target="_blank" rel="noopener">@papelardfestival</a>.</p>
+        </section>
+
         <section id="infos">
             <h2>Infos pratiques</h2>
+            <p class="infos-intro">Le Festival Papelard se déroule du 1er au 31 décembre 2026 à La Roche-sur-Yon : trois ateliers pour découvrir la pratique du fanzine et la technique du cyanotype, des expositions dans plusieurs lieux de la ville, et un week-end fort du vendredi 4 au dimanche 6 décembre, avec cinéma, Supermarché de la micro-édition et concerts.</p>
+
+            <ol class="agenda">
+                <li style="--day-color: #ff4496;">
+                    <div class="when">Vendredi 4 décembre<small>20h et 20h30</small></div>
+                    <div>
+                        <h3>Vernissage et projection</h3>
+                        <p class="where">Cinéma Le Concorde, 2D rue du Maréchal Foch, avec l'association OffScreen</p>
+                        <p class="line"><strong>20h · Vernissage</strong> de l'exposition des fonds de l'Artothèque du réseau des Médiathèques de La Roche-sur-Yon Agglomération.</p>
+                        <p class="line"><strong>20h30 · Projection</strong> du film d'animation « Unicorn Wars » (Alberto Vázquez, 2022), présentée par OffScreen.</p>
+                    </div>
+                </li>
+                <li style="--day-color: #1832bb;">
+                    <div class="when">Samedi 5 décembre<small>11h–20h</small></div>
+                    <div>
+                        <h3>Supermarché de la micro-édition et concert</h3>
+                        <p class="where">La Gâterie, 17 place du Marché, avec la commission Papelard</p>
+                        <p class="line">Une expo-vente réunissant 11 artistes et collectifs : venez découvrir leurs stands, avec un concert de Shitty Shed en clôture. <strong>Entrée libre</strong> ; seuls les achats sur les stands des artistes et au bar sont payants.</p>
+                    </div>
+                </li>
+                <li style="--day-color: #2f0036;">
+                    <div class="when">Dimanche 6 décembre<small>14h–20h</small></div>
+                    <div>
+                        <h3>Atelier fanzine musique et concert</h3>
+                        <p class="where">L'Abri Bar, avec l'association Domino Panda</p>
+                        <p class="line"><strong>14h–18h · Atelier fanzine musique</strong>, à prix libre, sur réservation (~12 places) : chaque participant·e envoie en amont un morceau de musique, qui sera réuni avec les autres sur une clé USB accompagnant le fanzine réalisé sur place.</p>
+                        <p class="line"><strong>18h30 · Concert</strong> d'ARLT.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="when">Samedi 12 décembre<small>15h–17h30</small></div>
+                    <div>
+                        <h3>Atelier cyanotype</h3>
+                        <p class="where">Bistro Martha, 14 rue Paul Doumer</p>
+                        <p class="line">Atelier à prix libre, sur réservation (~12 places), suivi d'une exposition des travaux au Bistro Martha.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="when">Samedi 19 décembre<small>14h–18h</small></div>
+                    <div>
+                        <h3>Atelier fanzine</h3>
+                        <p class="where">La Gâterie, 17 place du Marché</p>
+                        <p class="line">Atelier à prix libre, sur réservation (~12 places).</p>
+                    </div>
+                </li>
+            </ol>
+
             <div class="infos-flex">
                 <img src="assets/img/badge-infos.png" alt="Supermarché de la micro-édition, La Gâterie, entrée libre" class="badge-infos-img">
                 <div class="info-grid">
                     <div class="info-item">
-                        <h3>Quand</h3>
-                        <p>Samedi 5 décembre 2026. Supermarché à partir de 11h, puis concert à partir de 19h ! </p>
+                        <h3>Tarifs et réservation</h3>
+                        <p>Entrée libre au Supermarché et au concert du samedi. Tous les ateliers sont à prix libre et sur réservation : les contributions financent directement le festival.</p>
                     </div>
                     <div class="info-item">
-                        <h3>Où</h3>
-                        <p>La Gâterie, 17 place du Marché, 85000 La Roche-sur-Yon</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Tarif</h3>
-                        <p>Entrée libre, concert compris. Seuls les achats sur les stands des artistes et au bar restent payants.</p>
+                        <h3>Expositions</h3>
+                        <p>Tout au long du mois, à L'Abri Bar, Comme à la Radio, au Cinéma Le Concorde et au Bistro Martha (voir le plan dans le programme).</p>
                     </div>
                 </div>
             </div>
-            <p class="info-note">Ces informations concernent le temps fort du 5 décembre. Les dates des expositions, ateliers et projections seront précisées prochainement.</p>
         </section>
 
         <section id="faq">
@@ -233,11 +404,11 @@ Au programme :
 ✦ Ateliers,
 ✦ Cinéma,
 ✦ Supermarché de la micro-édition,
-✦ Et un concert pour clôturer la journée !</p>
+✦ Et deux concerts : Shitty Shed le samedi soir, ARLT le dimanche !</p>
             </details>
             <details>
                 <summary>C'est quand ?</summary>
-                <p>Le Supermarché de la micro-édition aura lieu le samedi 5 décembre 2026, à partir de 11h, à La Gâterie (entrée libre), suivi d'un concert à partir de 19h au même endroit. Les autres évènements du festival (expositions, ateliers, cinéma) se dérouleront tout au long du mois de décembre — dates à venir.</p>
+                <p>Le festival se déroule du 1er au 31 décembre 2026, avec un week-end fort du vendredi 4 au dimanche 6 décembre : vernissage (20h) et projection (20h30) au Cinéma Le Concorde le vendredi, Supermarché de la micro-édition de 11h à 20h avec un concert en clôture à La Gâterie le samedi, atelier fanzine (14h–18h) et concert (18h30) à L'Abri Bar le dimanche. Expositions et ateliers se répartissent tout au long du mois : voir le programme ci-dessus.</p>
             </details>
             <details>
                 <summary>Comment exposer ou tenir un stand au Supermarché de la micro-édition ?</summary>
@@ -249,7 +420,7 @@ Au programme :
             </details>
             <details>
                 <summary>L'entrée est-elle payante ?</summary>
-                <p>L'entrée du Supermarché de la micro-édition est libre. Pour les autres évènements, à venir.</p>
+                <p>L'entrée du Supermarché de la micro-édition et du concert qui le clôture est libre. Les ateliers sont à prix libre, sur réservation (~12 places). Pour la projection du vendredi et le concert du dimanche, les conditions seront précisées prochainement.</p>
             </details>
         </section>
 
@@ -259,6 +430,23 @@ Au programme :
             <a href="boutique.html" class="btn btn-primary">Voir la boutique</a>
             <img src="assets/img/main-droite.png" alt="" aria-hidden="true" class="cta-hand">
         </div>
+
+        <section id="partenaires">
+            <h2>Partenaires &amp; soutiens</h2>
+            <p>Merci à nos bénévoles, à nos partenaires et soutiens :</p>
+            <ul class="chip-list">
+                <li>Bistro Martha</li>
+                <li>Cinéma Le Concorde</li>
+                <li>Comme à la Radio</li>
+                <li>Collectif l'Interzone</li>
+                <li>CréAttitude</li>
+                <li>Domino Panda</li>
+                <li>L'Abri Bar</li>
+                <li>L'Artothèque du réseau des Médiathèques de La Roche-sur-Yon Agglomération</li>
+                <li>La Gâterie</li>
+                <li>OffScreen</li>
+            </ul>
+        </section>
 
         <section id="contact">
             <h2>Suivre le festival + nous contacter</h2>
