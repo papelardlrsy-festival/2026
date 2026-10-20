@@ -145,13 +145,6 @@
         details[open] summary::after { content: '−'; }
         details p { white-space: pre-line; }
 
-        /* Boutique CTA banner */
-        .cta-banner { background: var(--text); color: #fff; border-radius: var(--radius); padding: 2.5rem; text-align: center; margin-top: 4.5rem; position: relative; overflow: visible; }
-        .cta-banner h2 { border: none; color: #fff; }
-        .cta-banner p { color: #dfe3ff; max-width: 50ch; margin: 0 auto 1.5rem; }
-        .cta-banner .btn-primary:hover { background: #ffffff; color: var(--text); }
-        .cta-hand { position: absolute; width: 90px; bottom: -20px; right: 10%; transform: rotate(-25deg); filter: brightness(0) invert(1); opacity: 0.9; }
-
         /* Socials / contact */
         .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
         .social-links a { border: 2px solid var(--text); border-radius: 50px; padding: 0.5rem 1.1rem; color: var(--text); font-weight: 600; }
@@ -174,9 +167,6 @@
     <nav class="topnav">
         <div class="container topnav-inner">
             <a href="index.html" class="brand">Papelard</a>
-            <a href="boutique.html" class="nav-link">
-                <span class="nav-link-full">Je veux mon t-shirt !</span>
-                <span class="nav-link-short">T-shirt</span>
             </a>
         </div>
     </nav>
@@ -194,9 +184,8 @@
             <div class="hero-actions">
                 <a href="#programme" class="btn btn-primary">Voir le programme</a>
                 <a href="#infos" class="btn btn-outline">Infos pratiques</a>
-            </div>
-            <div class="hero-actions-secondary">
-                <a href="boutique.html" class="btn btn-dark">Boutique</a>
+                <a href="#partenaires" class="btn btn-primary">Partenaires</a>
+                <a href="#contact" class="btn btn-dark">Contact</a>
             </div>
         </div>
     </header>
@@ -409,13 +398,6 @@ Au programme :
                 <p>L'entrée du Supermarché de la micro-édition et du concert qui le clôture est libre. Les ateliers sont à prix libre, sur réservation (~12 places). Pour la projection du vendredi, les conditions seront précisées prochainement.</p>
             </details>
         </section>
-
-        <div class="cta-banner">
-            <h2>La boutique du festival</h2>
-            <p>T-shirts sérigraphiés par nos bénévoles du Festival Papelard, en édition limitée.</p>
-            <a href="boutique.html" class="btn btn-primary">Voir la boutique</a>
-            <img src="assets/img/main-droite.png" alt="" aria-hidden="true" class="cta-hand">
-        </div>
 
         <section id="partenaires">
             <h2>Partenaires &amp; soutiens</h2>
